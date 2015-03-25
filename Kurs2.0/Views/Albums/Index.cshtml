@@ -1,0 +1,46 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<!DOCTYPE html>
+  
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Music.by</title>
+</head>
+<body>
+    <div>
+        <h3>Musicians</h3>
+        <table>
+            <tr><td>
+                    <p>Name</p></td>
+                <td>
+                    <p>Surname</p></td>
+                <td>
+                    <p>Secondname</p></td>
+                <td>
+                    Link
+                </td>
+            </tr>
+            @foreach (var b in ViewBag.Albums)
+            {
+                <tr>
+                    <td>
+                        <p>@b.Id</p></td>
+                    <td>
+                        <p>@b.Title</p></td>
+                    <td>
+                        <p>@b.CoverPath</p></td>
+                    <td>
+                        <p>@b.Text</p></td>
+                    <td><p><a href="Albums/Album/@b.Id">Посмотреть</a></p></td>
+                </tr>
+                }
+        </table>
+        <a href="/Albums/AddPage"> Добавить </a>
+    </div>
+</body>
+</html>

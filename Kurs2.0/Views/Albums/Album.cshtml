@@ -1,0 +1,14 @@
+﻿@{
+    ViewBag.Title = "Album";
+}
+
+<h2> @ViewBag.Mus.Title @ViewBag.Mus.Text </h2> <br>
+
+<img src="@ViewBag.Mus.CoverPath" alt = "No img"  >
+
+<img src="D:\1.png" alt = "No img"  >
+
+  @foreach (Kurs2._0.Models.Musician m in ViewBag.M)
+  {
+      <p>@m.Name @m.Surname </p>
+  }
